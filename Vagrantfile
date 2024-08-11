@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y build-essential ninja-build git vim fish kmod clangd linux-headers-$(uname -r)
+    sudo apt-get install -y build-essential gdb ninja-build git vim fish kmod clangd linux-headers-$(uname -r)
     chsh -s $(which fish) vagrant
   SHELL
 end
